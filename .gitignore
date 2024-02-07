@@ -1,0 +1,6 @@
+.DS_*
+node_modules
+wp-content/.DS_*
+wp-content/s3-timber/.DS_*
+wp-content/s3-timber/composer.lock
+wp-content/s3-timber/vendor/

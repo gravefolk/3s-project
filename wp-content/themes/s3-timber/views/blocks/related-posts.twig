@@ -1,0 +1,18 @@
+
+{#
+  Title: Related Posts
+  Description: Show related posts from post type
+  Category: formatting
+  Icon: admin-comments
+  Keywords: related posts
+  Mode: edit
+  SupportsMode: false
+  SupportsMultiple: true
+#}
+
+<section class="gutenberg-rel-posts-block">
+    <div class="gutenberg-url-block">
+        {{ fields.opis }}
+        <a href="{{ fields.link.url }}" target="_blank">{{ fields.link.title }}</a>
+    </div>
+</section>

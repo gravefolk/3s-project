@@ -1,0 +1,28 @@
+{
+  "name": "upstatement/timber-starter-theme",
+  "description": "Starter theme to build a Timber theme",
+  "type":"wordpress-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "email": "karl@agarthaweb.com",
+      "name": "karljurgs"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "timber/timber": "2.x-dev",
+    "palmiak/timber-acf-wp-blocks": "^1.15"
+  },
+  "config": {
+    "allow-plugins": {
+      "roots/wordpress-core-installer": true,
+      "composer/installers": true
+    }
+  }
+}
