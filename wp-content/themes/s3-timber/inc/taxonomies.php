@@ -1,2 +1,8 @@
 <?php 
-// This is empty for now
+/**
+ * This is where you can register custom taxonomies.
+ */
+
+function register_taxonomies() {
+    //shhhh
+}

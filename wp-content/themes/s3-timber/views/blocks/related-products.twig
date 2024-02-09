@@ -1,0 +1,21 @@
+{#
+  Title: Related Products
+  Description: related products section
+  Category: 3s
+  Icon: cart
+  Keywords: home hero
+  Mode: edit
+#}
+
+<section class="gutenberg-home-hero-block">
+
+    {% for item in fields.select_posts %}
+        {# <p>{{ item }}</p> #}
+        <p>Related products Name: {{ item.title }}</p>
+    {% endfor %}
+    <div class="gutenberg-url-block">
+      {# <p>this is the related products block</p> #}
+    </div>
+</section>
+
+</hr>

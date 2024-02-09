@@ -1,11 +1,11 @@
 {
     "key": "group_65c2a31e0db10",
-    "title": "Related Post Block Fields",
+    "title": "Related Products Block",
     "fields": [
         {
             "key": "field_65c2a31ef29e0",
-            "label": "Select Post Type",
-            "name": "select_post_type",
+            "label": "Select Products",
+            "name": "select_posts",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -16,8 +16,12 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "post_status": "",
+            "post_type": [
+                "products"
+            ],
+            "post_status": [
+                "publish"
+            ],
             "taxonomy": "",
             "filters": [
                 "search",
@@ -26,7 +30,7 @@
             ],
             "return_format": "object",
             "min": "",
-            "max": "",
+            "max": 3,
             "elements": "",
             "bidirectional": 0,
             "bidirectional_target": []
@@ -37,7 +41,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/related-posts"
+                "value": "acf\/related-products"
             }
         ]
     ],
@@ -50,5 +54,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707256313
+    "modified": 1707438363
 }

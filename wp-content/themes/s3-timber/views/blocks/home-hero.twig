@@ -1,0 +1,20 @@
+{#
+  Title: Home Hero
+  Description: Home page hero section
+  Category: 3s
+  Icon: cover-image
+  Keywords: home hero
+  Mode: edit
+#}
+
+<section class="gutenberg-home-hero-block">
+    <div class="gutenberg-url-block">
+      {{ fields.home_hero_heading }}
+      {{ fields.home_hero_copy }}
+      {{ fields.home_hero_button.title|raw }}
+      {{ fields.home_hero_button.url }}
+      {{ fields.home_hero_button.target }}
+      {{ fields.home_hero_image.src }}
+      <hr>
+    </div>
+</section>
