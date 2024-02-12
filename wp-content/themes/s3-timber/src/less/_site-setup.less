@@ -9,19 +9,29 @@
 // colors
 
 :root {
+	--dark-blue: #212936;
 	--blue-80: #084062;
-	--grey-80: #3A3537;
+	--gray: #FCFCFC;
+	--dark-gray: #CDC8CA;
 	--black: #090306; 
-}
+	--white: #FAF9F6;
+	--bone-white: #F9F6EE;
+} 
 
 
 // layout
 @contentWidth: 770px;
-@wideWidth: 1040px;
-@widerWidth: 1250px; 
+@wideWidth: 1180px;
+@widestWidth: 1600px;
 
 // Breakpoints
 @tablet: 1024px;
 @tabletSmall: 767px;
 @mobile: 599px;
 @mobileSmall: 349px;
+
+.content-wrapper {
+	max-width: @wideWidth;
+	margin: 0 auto;
+	padding: 50px;
+}

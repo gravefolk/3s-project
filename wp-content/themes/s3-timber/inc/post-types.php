@@ -8,7 +8,7 @@ add_action( 'init', 'register_post_types' );
 function register_post_types(){
 
 	register_post_type( 'products', [
-		'taxonomies' => [], // post related taxonomies
+		'taxonomies' => ['product-type'], // post related taxonomies
 		'label'  => null,
 		'labels' => [
 			'name'               => 'Products', // name for the post type.
@@ -30,7 +30,7 @@ function register_post_types(){
 		'menu_position'       => null,
 		'menu_icon'           => 'dashicons-store',
 		'hierarchical'        => false,
-		'supports'            => [ 'title', 'editor', 'revisions' ],
+		'supports'            => [ 'title', 'editor', 'revisions', 'thumbnail' ],
 		'has_archive'         => false,
 		'rewrite'             => true,
 		'query_var'           => true,

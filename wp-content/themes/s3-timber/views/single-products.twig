@@ -1,0 +1,64 @@
+{% extends "base.twig" %}
+
+{% block head %}
+	<!-- Including SplideJS -->
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+	<!-- Including SplideJS end-->
+{% endblock %}
+
+{% block content %}
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+            <div class="content-wrapper">
+                <section class="product-content">
+                        <div class="product-main">
+                            <div class="product-img">
+                                <img src="{{ post.thumbnail.src }}">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-types">
+                                    {% for term in post.terms({ taxonomy: 'product-type' }) %}
+                                        <div class="product-type">{{ term.title }}</div>
+                                    {% endfor %}
+                                </div>
+                                <h2 class="product-heading">{{ post.title }}</h2>
+                                <div class="product-copy">{{ post.content }}</div>
+                                {% if post.meta('product_features') %}
+                                    <ul class="checklist product-features">
+                                        {% for features in post.meta('product_features') %}
+                                            {% for feature in features %}
+                                                <li>{{ feature|raw }}</li>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                <div class="product-price-wrapper">
+                                    {% if post.meta('product_price') %}
+                                        <div class="product-price">Price: {{ post.meta('product_price')|raw }}</div>
+                                    {% endif %}
+                                    <a class="btn" href="#">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+
+            {% if post.meta('product_gallery') %}
+                <section class="product-gallery">
+                    <h2 class="product-gallery-heading">Gallery</h2>
+                    <div class="splide product-gallery-wrapper">
+                        <div class="splide__track product-track-list">
+                            <ul class="splide__list product-gallery-list">
+                                {% for image in post.meta('product_gallery') %}
+                                    <li class="splide__slide product-slide">
+                                        <img src="{{ get_image(image) }}" alt="{{ get_image(image).alt }}" loading="lazy"/>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+
+		</article>
+{% endblock %}

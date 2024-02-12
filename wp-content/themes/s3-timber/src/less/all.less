@@ -1,91 +1,19 @@
-@import '_site-setup'; // defaults.vars, shell.nav
- 
-// @import '0_lib/idioms'; // no output
-// @import '0_lib/normalize';
-// @import '0_lib/micromodal';
-// //@import '0_lib/splide-core.min.less';
+// site setup
+@import '_reset';
+@import '_site-setup';
+@import '_typography';
+@import '_admin';
 
-// @import '1_setup/typography'; // defaults.vars, defaults.typography
-// @import '1_setup/layout'; // defaults.vars, defaults.layout
- 
-// @import '2_shell/footer';
-// @import '2_shell/header'; 
-// @import '2_shell/alert';
-// @import '2_shell/skip-links';
-// @import '2_shell/nav/_nav';
-// @import '2_shell/utilities';
+// globals
+@import 'header'; 
+@import 'footer'; 
+@import 'button'; 
+@import 'lists'; 
 
-// @import '2_shell/page-backgrounds';
- 
-// @import '3_components/bg-image';
-// @import '3_components/button';
-// @import '3_components/image-auto';
-// @import '3_components/social-list'; 
+// cpts
+@import 'products'; 
 
-// @import '3_components/micromodal-person';
-// @import '3_components/micromodal-video';
-
-// @import '3_components/social-share';
-// @import '3_components/coverage-search';
-
-// @import '3_components/scroll-reveal.less';
-
-// @import '3_components/listing';
-// @import '3_components/release-notes-listing';
-// @import '3_components/featured-blog-post';
-// @import '3_components/featured-resource-slider';
-
-// @import '3_components/forms';
-// @import '3_components/hide-nav';
-
-// @import '3_components/person-bio';
-
-// @import '3_components/wistia-embed';
-
-// @import 'singles/blog/single';
-// @import 'singles/blog/masthead';
-// @import 'singles/blog/sidebar';
-
-// @import 'singles/customer/single';
-// @import 'singles/customer/masthead';
-// @import 'singles/customer/sidebar';
-
-// @import 'singles/glossary/single';
-// @import 'singles/glossary/masthead';
-
-// @import 'singles/legal/single';
-// @import 'singles/legal/masthead';
-// @import 'singles/legal/sidebar';
-
-// @import 'singles/newsroom/single';
-// @import 'singles/newsroom/masthead';
-
-// @import 'singles/release-note/single';
-// @import 'singles/release-note/masthead';
-
-// @import 'singles/content-creators';
-
-// @import 'singles/reports';
-
-// @import 'singles/resource';
-
-// @import '../../blocks/_base';
-// @import '../../blocks/wp-blocks'; // overrides, defaults
-
-// @import '../../blocks/related-post/style.less'; // blocks
-// @import '../../blocks/related-posts/style.less'; // blocks
-// @import '../../blocks/footer-cta/style.less'; // blocks
-// @import '../../blocks/footer-form/style.less'; // blocks
-
-// @import 'pages/search'; // blocks
-// @import 'pages/glossary';
-// @import 'pages/blog';
-// @import 'pages/resources';
-
-// @import 'partials/_all';
-
-// @import 'wrappers/pagination';
-// @import 'wrappers/slider';
-// @import 'wrappers/wrapper';
-
-// @import 'partials/calculators';
+// blocks
+@import 'blocks/home-hero';
+@import 'blocks/related-products';
+@import 'blocks/testimonials';

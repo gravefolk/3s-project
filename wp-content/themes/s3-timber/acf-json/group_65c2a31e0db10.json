@@ -3,6 +3,44 @@
     "title": "Related Products Block",
     "fields": [
         {
+            "key": "field_65c845fc6c908",
+            "label": "Heading",
+            "name": "rel_prod_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65c843a845ebb",
+            "label": "Background Color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_65c2a31ef29e0",
             "label": "Select Products",
             "name": "select_posts",
@@ -28,7 +66,7 @@
                 "post_type",
                 "taxonomy"
             ],
-            "return_format": "object",
+            "return_format": "id",
             "min": "",
             "max": 3,
             "elements": "",
@@ -54,5 +92,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707438363
+    "modified": 1707623951
 }

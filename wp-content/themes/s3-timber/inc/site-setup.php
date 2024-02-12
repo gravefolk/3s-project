@@ -15,6 +15,10 @@ class StarterSite extends Site {
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_filter( 'timber/twig/environment/options', [ $this, 'update_twig_environment_options' ] );
 
+		add_action( 'wp_enqueue_scripts', array( $this, 'load_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'load_styles' ) );
+
+
 		parent::__construct();
 	}
 
@@ -30,6 +34,11 @@ class StarterSite extends Site {
 
 		return $context;
 	}
+
+	function load_styles() {
+    	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/all.min.css', array(), '1.0.0' );
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/scripts/all.min.js', array(), '1.0.0' );
+    } 
 
 	public function theme_supports() {
 		// Add default posts and comments RSS feed links to head.
@@ -57,8 +66,6 @@ class StarterSite extends Site {
 		add_theme_support(
 			'html5',
 			array(
-				'comment-form',
-				'comment-list',
 				'gallery',
 				'caption',
 			)

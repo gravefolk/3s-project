@@ -1,0 +1,57 @@
+.testimonial-block {
+    .content-wrapper {
+        .testimonials-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+
+            .testimonials-quotes {
+                display:grid;
+                grid-template-columns: 0.5fr 0.5fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                width: 50%;
+
+                .testimonials-quote {
+                    .testimonial-name {
+                        font-family: 'Poppins-Bold';
+                    }
+                }
+            }
+
+            .testimonials-img {
+                height: auto;
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media(max-width: @tabletSmall) {
+        .content-wrapper {
+            .testimonials-main {
+                flex-direction: column;
+
+                .testimonials-quotes {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .testimonials-img {
+                    display: none;
+                }
+            }
+        }
+    }
+}

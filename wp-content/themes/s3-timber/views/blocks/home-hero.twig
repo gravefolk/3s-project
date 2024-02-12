@@ -7,14 +7,16 @@
   Mode: edit
 #}
 
-<section class="gutenberg-home-hero-block">
-    <div class="gutenberg-url-block">
-      {{ fields.home_hero_heading }}
-      {{ fields.home_hero_copy }}
-      {{ fields.home_hero_button.title|raw }}
-      {{ fields.home_hero_button.url }}
-      {{ fields.home_hero_button.target }}
-      {{ fields.home_hero_image.src }}
-      <hr>
+<section class="home-hero-block">
+  <div class="content-wrapper">
+    <div class="copy">
+      <h1 class="heading">{{ fields.home_hero_heading }}</h1>
+      <p class="subtext">{{ fields.home_hero_copy }}</p>  
+      <a class="btn" target="{{ fields.home_hero_button.target }}" href="{{ fields.home_hero_button.url }}">{{ fields.home_hero_button.title }}</a>
     </div>
+    <div class="img">
+      <img src="{{ fields.home_hero_image.url }}" alt="{{ fields.home_hero_image.alt }}" loading="eager">
+    </div>
+  </div>
+  <hr>
 </section>

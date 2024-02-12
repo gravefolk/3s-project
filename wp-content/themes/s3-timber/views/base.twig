@@ -12,9 +12,9 @@
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
+					<a class="logo" href="{{site.url}}" rel="home">
+						<img src="{{ theme.link }}/images/logo.svg">
+					</a>
 					<nav id="nav-main" class="nav-main" role="navigation">
 						{% include "/partial/header-menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
@@ -22,7 +22,7 @@
 			{% endblock %}
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
+		<div id="content" role="main" class="main-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
 			<div class="wrapper">
 				{% block content %}
@@ -34,11 +34,13 @@
 					{{sidebar}}
 				</aside>
 			{% endif %}
-		</section>
+		</div>
 
 		{% block footer %}
 			<footer id="footer">
-				{% include 'footer.twig' %}
+				<div class="wrapper">
+					{% include 'footer.twig' %}
+				</div>
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}

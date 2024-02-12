@@ -7,15 +7,29 @@
   Mode: edit
 #}
 
-<section class="gutenberg-home-hero-block">
+<section class="related-products-block" style="background-color:{{ fields.background_color }}">
+    <div class="content-wrapper">
 
-    {% for item in fields.select_posts %}
-        {# <p>{{ item }}</p> #}
-        <p>Related products Name: {{ item.title }}</p>
-    {% endfor %}
-    <div class="gutenberg-url-block">
-      {# <p>this is the related products block</p> #}
+        <h2 class="heading">{{ fields.rel_prod_heading }}</h2>
+
+        <div class="rel-post-wrapper">
+            {% for item_id in fields.select_posts %}
+                {% set item = get_posts(item_id) %}
+
+                <div class="rel-post-item">
+                    <div class="rel-img">
+                        <img src="{{ item.thumbnail }}" alt="{{ item.thumbnail.alt }}" loading="lazy">
+                    </div>
+                    <div class="rel-copy">
+                        <h3>{{ item.post_title|raw }}</h3>
+                        {% if item.meta('excerpt') %}
+                            <p>{{ item.meta('excerpt')|raw }}</p>
+                        {% endif %} 
+                    </div>
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+
     </div>
 </section>
-
-</hr>

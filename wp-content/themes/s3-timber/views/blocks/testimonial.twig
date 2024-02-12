@@ -7,26 +7,24 @@
   Mode: edit
 #}
 
-<blockquote data-{{ block.id }}>
-  {{ fields.testimonials_heading }}
-  {{ fields.testimonials_subheading }}
-  {{ fields.testimonials_image.src }}
-
-  {% for item in fields.testimonials %}
-    <p>Testimonial Name: {{ item.name }}</p>
-    <p>Testimonial Copy: {{ item.copy }}</p>
-  {% endfor %}
-
-
-    <cite>
-      <span>{{ fields.author }}</span>
-    </cite>
-</blockquote>
-<hr>
-
-<style type="text/css">
-  [data-{{ block.id }}] {
-    background: {{ fields.background_color }};
-    color: {{ fields.text_color }};
-  }
-</style>
+<section class="testimonial-block">
+  <div class="content-wrapper">
+    <div class="testimonials-heading">
+      <h2>{{ fields.testimonials_heading }}</h2>
+      <p>{{ fields.testimonials_subheading }}</p>
+    </div>
+    <div class="testimonials-main">
+      <div class="testimonials-quotes">
+        {% for item in fields.testimonials %}
+          <div class="testimonials-quote">
+            <div class="testimonial-name">{{ item.name }}</div>
+            <div class="testimonial-copy">{{ item.copy }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="testimonials-img">
+        <img src="{{ fields.testimonials_image.url }}" alt="{{ fields.testimonials_image.alt }}" loading="lazy">
+      <div>
+    </div>
+  </div>
+</section>

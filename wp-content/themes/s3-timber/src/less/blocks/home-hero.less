@@ -1,0 +1,30 @@
+.home-hero-block {
+    .content-wrapper {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+
+        .copy {
+            width: 50%;
+        }
+
+        .img {
+            width: 50%;
+
+            img {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    @media(max-width: @tabletSmall) {
+        .content-wrapper {
+            flex-direction: column-reverse;
+
+            .copy, .img {
+                width: 100%;
+            }
+        }
+    }
+}
