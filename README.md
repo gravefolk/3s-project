@@ -1,5 +1,5 @@
 # KJ Timber Theme
-**Note - The wp-contents folder contains all my work for the project. The env and docker-compose.yml file are for setting up the local dev container. I included a zip file that contains the wp-content folder and a database I used with a bunch of test entries in case thats helpful.**
+**Note - The wp-contents folder contains all my work for the project exactly as it is in my local environment. The env and docker-compose.yml file are for setting up the local dev container. I included a zip file that contains the wp-content folder and a database I used with a bunch of test entries in case thats helpful.**
 
 ## Docker Set Up
 1. Have latest version of docker installed
@@ -47,8 +47,10 @@ Home page is built with 3 blocks: Home Hero, Related Products, and Testimonials 
 ### Products page 
 This is a CPT single page and pulls data from the ACF fields on the page
 
-## Things I would have done if I was going to spend more time on this:
+## Project Thoughts
+Overall im very pleased with this project. I think this custom theme uses best practices and techonologies and im going to continue working on it so I can build myself a new personal website. Apart from the related field block giving me a bit of a problem with pulling in data from the product post meta, this was pretty smooth. Im sure as soon as I send this off im going to think of a bunch of other improvements I can make but this is a list I made for myself of continuing improvements. 
 
+### Things I would have done if I was going to spend more time on this:
 - Instead of declaring fields in the CRM I would have generated them in the theme. For this test case I thought the locally stored ACF JSON is fine.
 - Create 'gallery' block
 - Enqueue the gallery splide JS library using wp_enqueue_scripts
