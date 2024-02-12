@@ -1,5 +1,7 @@
 # KJ Timber Theme
 
+** Note - The wp-contents folder contains all my work for the project. This repo contains the env and docker yaml file are for setting up the local container **
+
 ## Docker Set Up
 
 1. Have latest version of docker installed
