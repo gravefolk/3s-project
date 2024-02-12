@@ -1,9 +1,7 @@
 # KJ Timber Theme
-
-** Note - The wp-contents folder contains all my work for the project. This repo contains the env and docker yaml file are for setting up the local container **
+**Note - The wp-contents folder contains all my work for the project. This repo contains the env and docker yaml file are for setting up the local container. I included a zip file that contains the wp-content folder and a database I used with a bunch of test entries.**
 
 ## Docker Set Up
-
 1. Have latest version of docker installed
 2. Create project directory
 3. Import docker-compose.yaml file to newly created directory
@@ -22,7 +20,6 @@
     - I created this custom yaml file because the docker container provided by WP does not include a phpmyadmin image which is handy for DB management
 
 ## WordPress theme
-
 For this project I used timber/twig and the timber theme that is based off _s. Timber is installed inside the theme using the “composer require timber/timber” command in the terminal. This theme is a block based website so the home page is constructed out of 3 blocks. The products page is a non block page but could be easily converted if need be. 
 
 ### Theme composer primary dependencies
